@@ -1,10 +1,12 @@
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
+using KeePassCore.ViewModels;
+using ReactiveUI;
 
 namespace KeePassCore.Views
 {
-    public class MainWindow : Window
+    public class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         public MainWindow()
         {
@@ -15,7 +17,8 @@ namespace KeePassCore.Views
         }
 
         private void InitializeComponent()
-        {
+        {   
+            this.WhenActivated(disposables => { });
             AvaloniaXamlLoader.Load(this);
         }
     }

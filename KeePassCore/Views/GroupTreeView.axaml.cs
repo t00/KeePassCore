@@ -1,9 +1,11 @@
-using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
+using KeePassCore.ViewModels;
+using ReactiveUI;
 
 namespace KeePassCore.Views
 {
-    public class GroupTreeView : UserControl
+    public class GroupTreeView : ReactiveUserControl<GroupTreeViewModel>
     {
         public GroupTreeView()
         {
@@ -12,6 +14,7 @@ namespace KeePassCore.Views
 
         private void InitializeComponent()
         {
+            this.WhenActivated(disposables => { });
             AvaloniaXamlLoader.Load(this);
         }
     }

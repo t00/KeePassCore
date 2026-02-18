@@ -5,7 +5,7 @@
              xmlns:keePassLib="clr-namespace:KeePassLib;assembly=KeePassLibCore"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="KeePassCore.Views.GroupTreeView">
-  <TreeView>
+  <TreeView Items="{Binding RootGroups}">
       <DataTemplates>
           <TreeDataTemplate DataType="{x:Type keePassLib:PwGroup}" ItemsSource="{Binding Entries}">
               <TextBlock Text="{Binding Name}"></TextBlock>

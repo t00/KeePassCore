@@ -3,6 +3,7 @@
         xmlns:vm="using:KeePassCore.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:KeePassCore.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="KeePassCore.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -16,6 +17,7 @@
                 <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>
             </MenuItem>
         </Menu>
+        <views:GroupTreeView></views:GroupTreeView>
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </DockPanel>
 </Window>
